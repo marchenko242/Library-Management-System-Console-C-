@@ -32,11 +32,6 @@ namespace Services
                 Console.WriteLine("Enter the author of book: ");
                 string enterAuthorOfBook = Console.ReadLine();
 
-                Console.WriteLine("Enter the id of book: ");
-
-                bool isValidIDPrompt = int.TryParse(Console.ReadLine(), out int enterID);
-
-
                 foreach(Book book in books)
                 {
                     if(book.Title == title && book.Author == enterAuthorOfBook)
@@ -52,12 +47,26 @@ namespace Services
                 newBook.Id = newId;
                 newBook.Title = title;
                 newBook.Author = enterAuthorOfBook;
-                newBook.isAvalaible = true;
+                newBook.IsAvailable = true;
 
                 books.Add(newBook);
 
                 Console.WriteLine("Book added.");
 
+            }
+        }
+
+        public void ShowBooks(List<Book> books)
+        {
+            if(books.Count == 0)
+            {
+                Console.WriteLine("No books.");
+                return;
+            }
+
+            foreach(var book in books)
+            {
+                Console.WriteLine($"[{book.Id}] {book.Title} - {book.Author} (Available: {book.IsAvailable}).");
             }
         }
     }
