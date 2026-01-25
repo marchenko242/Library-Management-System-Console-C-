@@ -10,6 +10,9 @@ class Program
         List<Book> books = new List<Book>();
         BookService bookService = new BookService();
 
+        List<Reader> listOfReaders = new List<Reader>();
+        ReaderService readerService = new ReaderService();
+
         Console.WriteLine("Welcome to the Library Management System!");
 
         while(true)
@@ -22,17 +25,16 @@ class Program
             {
                 case "1":
                     bookService.AddBook(books);
-
                     break;
                 case "2":
                     bookService.ShowBooks(books);
                     break;
+                case "3":
+                    readerService.AddReader(listOfReaders);
+                    break;
+
             }
         }
-        
-        
-        
-
     }
 
 }
