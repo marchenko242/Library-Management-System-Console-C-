@@ -32,6 +32,9 @@ class Program
                 case "3":
                     readerService.AddReader(listOfReaders);
                     break;
+                case "4":
+                    readerService.ShowAllReaders(listOfReaders);
+                    break;
 
             }
         }
