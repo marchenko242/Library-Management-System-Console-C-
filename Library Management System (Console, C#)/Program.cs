@@ -19,11 +19,6 @@ class Program
         ReaderService readerService = new ReaderService();
 
         LoanService loanService = new LoanService();
-
-        
-
-
-
         Console.WriteLine("Welcome to the Library Management System!");
 
         while(true)

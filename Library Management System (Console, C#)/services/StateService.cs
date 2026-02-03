@@ -9,7 +9,6 @@ namespace Services
 {
     public class StateService
     {
-
         private const string DataFolder = "Data";
         private const string BooksFile = "Data/books.json";
         private const string LoansFile = "Data/loans.json";
@@ -28,8 +27,6 @@ namespace Services
             File.WriteAllText(LoansFile, JsonSerializer.Serialize(loans));
 
         }
-
-
         public List<Book> LoadBooks()
         {
             if (!File.Exists(BooksFile))

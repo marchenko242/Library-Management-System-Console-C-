@@ -52,7 +52,6 @@ namespace Services
                 books.Add(newBook);
 
                 Console.WriteLine("Book added.");
-
             }
         }
 

@@ -17,8 +17,6 @@ namespace Services
                 Console.WriteLine("Invalid book id.");
                 return;
             }
-
-
             Book selectedBook = null;
 
             foreach (Book b in books)
@@ -36,13 +34,11 @@ namespace Services
                 return;
             }
 
-
             if(selectedBook.IsAvailable == false)
             {
                 Console.WriteLine("Book is busy.");
                 return;
             }
-
             //-------
 
             Console.WriteLine("Enter id of reader: ");
@@ -80,11 +76,8 @@ namespace Services
             loan.IsReturned = false;
 
             loans.Add(loan);
-
             selectedBook.IsAvailable = false;
             Console.WriteLine("Book borrowed successfully.");
-
-
         }
 
         public void ReturnBook(List<Loan> loans, List<Book> books)
@@ -144,8 +137,5 @@ namespace Services
             Console.WriteLine("Book returned successfully.");
 
         }
-
-
-
     }
 }
